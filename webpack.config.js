@@ -1,5 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
 
 module.exports = {
     entry : __dirname + '/src/asset/javascript/app.js',
@@ -21,8 +23,9 @@ module.exports = {
             template: __dirname + "/src/index.tmpl.html"
         }),
         new webpack.HotModuleReplacementPlugin(),
-
-
+        new OpenBrowserPlugin({
+            url: 'http://localhost:1337'
+        })
     ],
     devServer : {
         contentBase: "./dist",

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var appContainers = document.querySelectorAll('#app');
+var appContainer = document.querySelectorAll('#app');
 
 class App extends React.Component {
 	constructor(){

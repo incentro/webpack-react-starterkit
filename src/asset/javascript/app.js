@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var appContainers = document.querySelectorAll('#app');
-
 class App extends React.Component {
 	constructor(){
 
@@ -16,12 +14,14 @@ class App extends React.Component {
 	}
 	
     render() {
-    	<h1> Hier is een demo opzet</h1>
+    	return (
+    		<h1> Hier is een demo opzet: {this.state.demo}</h1>
+    	);
 
     }
 };
 
-export default App;
+ReactDOM.render(<App />, document.querySelector('#app'));
 
-ReactDOM.render(<App />, appContainer);
+export default App;
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Input from './components/input/input.js';
+
 class App extends React.Component {
 	constructor(){
 
@@ -15,7 +17,10 @@ class App extends React.Component {
 	
     render() {
     	return (
-    		<h1> Hier is een demo opzet: {this.state.demo}</h1>
+    		<div>
+    			<h1> Hier is een demo opzet: {this.state.demo}</h1>
+    			<Input />
+    		</div>
     	);
 
     }
